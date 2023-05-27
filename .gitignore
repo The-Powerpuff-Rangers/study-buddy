@@ -16,3 +16,14 @@
 **/obj
 **/build
 **/dist
+
+######################
+# OS generated files #
+######################
+
+.DS_Store
+/.svelte-kit
+/package
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
