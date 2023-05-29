@@ -19,6 +19,8 @@
     "svelte": "^3.55.0"
   },
   "dependencies": {
-    "sirv-cli": "^2.0.0"
+    "@appwrite.io/pink": "^0.0.6",
+    "sirv-cli": "^2.0.0",
+    "three": "^0.152.2"
   }
 }
