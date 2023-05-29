@@ -17,5 +17,12 @@
     "tslib": "^2.5.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@appwrite.io/pink": "^0.0.6",
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "install": "^0.13.0",
+    "npm": "^9.6.7",
+    "three": "^0.152.2"
   }
 }
