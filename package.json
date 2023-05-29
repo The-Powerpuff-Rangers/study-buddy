@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5000",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
@@ -14,6 +14,7 @@
     "@tsconfig/svelte": "^4.0.1",
     "svelte": "^3.57.0",
     "svelte-check": "^2.10.3",
+    "svelte-routing": "^1.8.9",
     "tslib": "^2.5.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
