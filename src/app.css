@@ -1,6 +1,7 @@
 :root {
     --background-color: #000;
-    --text-color: #fff;
+    --highlight-color: #fff;
+    --text-color: #000000;
   }
 
 body{
