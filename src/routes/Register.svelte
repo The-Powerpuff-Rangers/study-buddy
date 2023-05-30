@@ -63,7 +63,7 @@
 
           <!-- Dropdown here -->
 
-          <div class="w-full h-8">
+          <!-- <div class="w-full h-8">
             <label for="universities" class="block mt-4 text-sm text-slate-900"
               >Select Your University</label
             >
@@ -73,7 +73,7 @@
                 <option value={university}>{university}</option>
               {/each}
             </select>
-          </div>
+          </div> -->
           <!-- END -->
 
           <button class="block w-full px-4 py-2 mt-10 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue bg-pink-600">

@@ -3,14 +3,14 @@
     export let logout: () => void;
   </script>
   
-  <nav class="bg-transparent text-primary-100 py-5 px-4  flex items-center w-7/12 mx-auto justify-between">
+  <nav class="text-primary-100 p-3 py-5  mt-3 flex items-center w-5/6 mx-auto justify-between rounded-xl bg-gray-700 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg">
     <div class="text-xl font-bold">{title}</div>
     <div class="flex justify-center space-x-4">
-      <button class="px-4 py-2 rounded hover:bg-neutral-200  ">Home</button>
-      <button class="px-4 py-2 rounded hover:bg-neutral-200">About</button>
-      <button class="px-4 py-2 rounded hover:bg-neutral-200">Friends</button>
+      <button class="px-4 py-2 rounded hover:text-white  ">Home</button>
+      <button class="px-4 py-2 rounded hover:text-white">About</button>
+      <button class="px-4 py-2 rounded hover:text-white">Friends</button>
     </div>
-    <button class="px-4 py-2 rounded hover:bg-neutral-200" on:click={logout}>Logout</button>
+    <button class="p-3 rounded-xl bg-primary-200 text-white" on:click={logout}>Logout</button>
   </nav>
   
 
