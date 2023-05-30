@@ -9,7 +9,6 @@
   import Calling from "./routes/Calling.svelte";
 
 </script>
-
 <Router>
   <Route path="/" component="{Landing}"/>
   <Route path="/home" component="{Index}" />

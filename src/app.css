@@ -1,6 +1,7 @@
 :root {
     --background-color: #000;
-    --text-color: #fff;
+    --highlight-color: #fff;
+    --text-color: #000000;
   }
 
 body{
@@ -8,5 +9,9 @@ body{
     padding: 0;
     background: var(--background-color);
     color: var(--text-color);
+}
+#app{
+  padding: 0;
+  margin: 0;
 }
 
