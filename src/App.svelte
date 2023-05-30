@@ -7,10 +7,9 @@
   import Login from "./routes/Login.svelte";
   import Register from "./routes/Register.svelte";
   import Calling from "./routes/Calling.svelte";
-  import TailwindCss from '../TailwindCSS.svelte';
 
 </script>
-<TailwindCss />
+
 <Router>
   <Route path="/" component="{Landing}"/>
   <Route path="/home" component="{Index}" />

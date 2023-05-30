@@ -3,7 +3,7 @@
   import ProfileCard from "../components/ProfileCard.svelte";
 
 </script>
-<div class=" bg-neutral-300 h-screen">   
+<div class=" bg-neutral-300 h-screen w-screen">   
     <Nav />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-6">
         <div class="bg-transparent p-4">
