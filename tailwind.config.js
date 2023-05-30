@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors:{
-        teansparent: "transparent",
+        transparent: "transparent",
         primary:{
           100: "#f02c64",
           200: "#da1b5a",
