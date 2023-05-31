@@ -19,7 +19,7 @@
       const particlesCount = 1000;
       const particlesGeometry = new THREE.BufferGeometry();
       const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.05,
+        size: 0.1,
         color: new THREE.Color(),
         blending: THREE.AdditiveBlending,
         transparent: true,
