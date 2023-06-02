@@ -7,6 +7,7 @@
   import Login from "./routes/Login.svelte";
   import Register from "./routes/Register.svelte";
   import Calling from "./routes/Calling.svelte";
+  import Friends from "./routes/Friends.svelte";
 
 </script>
 <Router>
@@ -16,5 +17,6 @@
   <Route path="/profile" component="{Profile}" />
   <Route path="/login" component="{Login}" />
   <Route path="/register" component="{Register}" />
+  <Route path="/friends" component="{Friends}" />
   <Route path="/calling" component="{Calling}" />
 </Router>
