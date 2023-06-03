@@ -8,14 +8,16 @@
   }
 </script>
 
-<nav class="text-primary-100 p-3 py-5 mt-3 px-15 flex md:flex-row items-center w-auto mx-auto justify-between rounded-xl bg-neutral-150 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg">
+<nav class="text-primary-100 p-3 py-5 px-15 flex md:flex-row items-center w-auto mx-auto justify-between rounded-xl bg-neutral-150 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg">
   
   <div class="text-xl px-6 font-bold">{title}</div>
-  <div class="max-md:hidden mx-auto ">
-  <div class="flex justify-center md:justify-start space-x-4">
+  <div class="max-md:hidden w-full">
+  <div class="flex space-x-4 justify-end">
+    <div class="flex justify-end w-full">
     <button class="px-6 py-2 rounded hover:text-white">Home</button>
     <button class="px-6 py-2 rounded hover:text-white">About</button>
     <button class="px-6 py-2 rounded hover:text-white">Friends</button>
+  </div>
     <button class="p-3 mx-6 rounded-xl bg-primary-200 text-white " on:click={logout}>Logout</button>
   </div>
 </div>
