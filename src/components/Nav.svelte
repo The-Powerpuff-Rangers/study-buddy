@@ -2,7 +2,7 @@
   export let title: string = "StudyBuddy";
   export let logout: () => void;
 
-  let active:string = "hidden";
+  let active: string = "hidden";
   function toggleActive() {
     active = active === "hidden" ? "block" : "hidden";
   }
@@ -20,19 +20,49 @@
   </div>
     <button class="p-3 mx-6 rounded-xl bg-primary-200 text-white " on:click={logout}>Logout</button>
   </div>
-</div>
-  <div class="relative md:hidden">
-    <button type="button" class="p-3 rounded-md bg-primary-200 text-white" aria-label="Menu" on:click={toggleActive}>
-      <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M4 6h16M4 12h16M4 18h16"></path>
+  <div class=" md:hidden">
+    <button
+      type="button"
+      class="p-3 rounded-md bg-primary-200 text-white"
+      aria-label="Menu"
+      on:click={toggleActive}
+    >
+      <svg
+        class="h-6 w-6"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-    <div class="{active} origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none " id="dropdown-menu">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Home</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">About</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Friends</a>
-      <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" on:click={logout} role="menuitem">Logout</button>
+    <div
+      class="{active} origin-top-right fixed right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+      id="dropdown-menu"
+    >
+      <a
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+        role="menuitem"
+        href="/">Home</a
+      >
+      <a
+        href="/about"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+        role="menuitem">About</a
+      >
+      <a
+        href="/"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+        role="menuitem">Friends</a
+      >
+      <button
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+        on:click={logout}
+        role="menuitem">Logout</button
+      >
     </div>
   </div>
 </nav>
-
