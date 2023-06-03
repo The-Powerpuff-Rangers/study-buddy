@@ -8,21 +8,17 @@
   }
 </script>
 
-<nav
-  class="text-primary-100 p-3 py-5 mt-3 px-15 flex md:flex-row items-center w-auto mx-auto justify-between rounded-xl bg-neutral-150 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg"
->
+<nav class="text-primary-100 p-3 py-5 px-15 flex md:flex-row items-center w-auto mx-auto justify-between rounded-xl bg-neutral-150 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg">
+  
   <div class="text-xl px-6 font-bold">{title}</div>
-  <div class="max-md:hidden w-1/3 flex justify-between">
-      <div class="flex">
-        <a class="px-6 py-4 rounded hover:text-white" href="/">Home</a>
-        <a class="px-6 py-4 rounded hover:text-white" href="/about">About</a>
-        <a class="px-6 py-4 rounded hover:text-white" href="/calling">Friends</a
-        >
-      </div>
-      <button
-        class="p-3 mx-6 rounded-xl bg-primary-200 text-white"
-        on:click={logout}>Logout</button
-      >
+  <div class="max-md:hidden w-full">
+  <div class="flex space-x-4 justify-end">
+    <div class="flex justify-end w-full">
+    <button class="px-6 py-2 rounded hover:text-white">Home</button>
+    <button class="px-6 py-2 rounded hover:text-white">About</button>
+    <button class="px-6 py-2 rounded hover:text-white">Friends</button>
+  </div>
+    <button class="p-3 mx-6 rounded-xl bg-primary-200 text-white " on:click={logout}>Logout</button>
   </div>
   <div class=" md:hidden">
     <button
