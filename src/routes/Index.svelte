@@ -4,16 +4,6 @@
   import SubjectCard from "../components/SubjectCard.svelte";
 </script>
 
-<style>
-  .custom-img {
-    background-image: url("../assets/backgroundHome.png");
-  }
-  @media (max-height: 700px) {
-    .heading {
-      margin-top: 0rem;
-    }
-  }
-</style>
 <!--
 <div class="bg-neutral-300 bg h-full w-full flex-col">
   <div class="w-5/6 max-md:w-3/4 mx-auto items-center">
@@ -49,42 +39,49 @@
   </div>
 </div> -->
 
-<header class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img overflow-hidden">
-  <div class="w-5/6 max-md:w-3/4 mx-auto items-center  bg-transparent">
-    <Nav/>
-    </div>    
+<Nav/>
+<header
+class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img overflow-hidden"
+>
   <div class="p-5 mx-auto mt-36 heading">
-    <div class="bg-transparent p-4 w-5/6 flex-col justify-center items-center mx-auto">
+    <div
+      class="bg-transparent p-4 w-5/6 flex-col justify-center items-center mx-auto"
+    >
       <div class="mx-auto w-full">
-      <h2 class="text-xl text-white font-medium mt-5 ">
-        Find your study buddy today
-      </h2>
-      <h1 class="text-white font-bold max-md:text-8xl max-sm:text-6xl max-lg:text-9xl lg:text-9xl">Apes Together Strong</h1>
+        <h2 class="text-xl text-white font-medium mt-5">
+          Find your study buddy today
+        </h2>
+        <h1
+          class="text-white font-bold max-md:text-8xl max-sm:text-6xl max-lg:text-9xl lg:text-9xl"
+        >
+          Apes Together Strong
+        </h1>
       </div>
     </div>
-    
   </div>
-  
 </header>
 <div class=" bg-neutral-300 w-full text-center">
-  <h1 class="p-10"></h1>
-  <h2 class="text-5xl bg-neutral-200 pt-10 mb-10 pb-10 w-fit rounded-full text-white font-medium mx-auto shadow-lg shadow-neutral-150">
+  
+  <h2
+    class="text-5xl bg-neutral-200 pt-10 mb-10 pb-10 w-fit rounded-full text-white font-medium mx-auto shadow-lg shadow-neutral-150"
+  >
     <p class="p-3">Let's start learning...</p>
   </h2>
-  <div class="grid grid-cols-3 p-4 gap-4 mb-4 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1">
-
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    <SubjectCard/>
-    
-</div></div>
+  <div
+    class="grid grid-cols-3 p-4 gap-4 mb-4 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
+  >
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+    <SubjectCard />
+  </div>
+</div>
 <section
   class="flex items-center justify-center h-screen mx-auto mb-12 bg-fixed bg-center bg-cover custom-img"
 >
@@ -120,3 +117,14 @@
     neque.
   </p>
 </div>
+
+<style>
+  .custom-img {
+    background-image: url("../assets/backgroundHome.png");
+  }
+  @media (max-height: 700px) {
+    .heading {
+      margin-top: 0rem;
+    }
+  }
+</style>
