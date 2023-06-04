@@ -5,7 +5,7 @@
 
 <div class="bg-neutral-300 h-screen w-full">
   <Nav />
-  <div class="mb-3 w-2/3 p-5 mx-24 pt-10">
+  <div class="mb-3 w-2/3 p-5 mx-28 pt-32">
     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
       <input
         type="search"
