@@ -15,9 +15,9 @@
     <div class="max-md:hidden w-full">
       <div class="flex space-x-4 justify-end">
         <div class="flex justify-end w-full">
-          <button class="px-6 py-2 rounded hover:text-white">Home</button>
-          <button class="px-6 py-2 rounded hover:text-white">About</button>
-          <button class="px-6 py-2 rounded hover:text-white">Friends</button>
+          <a class="px-6 py-2 rounded hover:text-white" href="/home">Home</a>
+          <a class="px-6 py-2 rounded hover:text-white" href="/about">About</a>
+          <a class="px-6 py-2 rounded hover:text-white" href="/friends">Friends</a>
         </div>
         <button
           class="p-3 mx-6 rounded-xl bg-primary-200 text-white"
