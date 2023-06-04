@@ -4,41 +4,6 @@
   import SubjectCard from "../components/SubjectCard.svelte";
 </script>
 
-<!--
-<div class="bg-neutral-300 bg h-full w-full flex-col">
-  <div class="w-5/6 max-md:w-3/4 mx-auto items-center">
-    <Nav />
-  </div>
-  <div class=" pl-6 text-white pt-0 md:mt-20">
-    <div class="bg-transparent p-4 w-5/6">
-      <h2 class="text-xl text-white font-medium mt-5">
-        Find your study buddy today
-      </h2>
-      <h1 class="text-white font-bold w-5/6 lg:text-9xl my-auto md:text-6xl text-8xl">Apes Together Strong</h1>
-    </div>
-    <div class="p-4 w-1/2 mx-auto">
-      <div class="scrollable rounded-lg">
-        <div class="grid grid-cols-2 md:grid-cols-2 p-2 gap-4">
-
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-          <div><SubjectCard/></div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <Nav/>
 <header
 class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img overflow-hidden"
