@@ -3,11 +3,8 @@
   import UserInvite from "../components/UserInvite.svelte";
 </script>
 
-<div class="bg-neutral-300 h-screen w-full overflow-hidden">
-  <div class="w-5/6 max-md:w-3/4 mx-auto items-center">
-    <Nav />
-  </div>
-
+<div class="bg-neutral-300 h-screen w-full">
+  <Nav />
   <div class="mb-3 w-2/3 p-5 mx-24 pt-10">
     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
       <input
@@ -39,4 +36,21 @@
     </div>
   </div>
 
+  <!-- User Invite Cards -->
+  <!-- Friends -->
+  <label class="text-xl font-bold text-white ml-24" for="friends">
+    Friends
+  </label>
+  <div id="friends">
+    <UserInvite isFriends={true} />
+    <UserInvite isFriends={true} />
+  </div>
+  <!-- Unknown Users -->
+  <label class="text-xl font-bold text-white ml-24" for="friends">
+    Invites
+  </label>
+  <div id="friends">
+    <UserInvite isFriends={false} />
+    <UserInvite isFriends={false} />
+  </div>
 </div>
