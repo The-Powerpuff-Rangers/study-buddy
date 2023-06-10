@@ -24,7 +24,8 @@
           on:click={logout}>Logout</button
         >
       </div>
-      <div class=" md:hidden">
+    </div>
+      <div class="md:hidden">
         <button
           type="button"
           class="p-3 rounded-md bg-primary-200 text-white"
@@ -69,6 +70,5 @@
           >
         </div>
       </div>
-    </div>
   </nav>
 </div>

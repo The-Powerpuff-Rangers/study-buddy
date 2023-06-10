@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="flex w-3/5 mx-28 justify-between bg-neutral-400 border-2 border-neutral-200 text-white p-3 rounded-2xl"
+  class="flex w-3/5 mx-auto justify-between bg-neutral-400 border-2 border-neutral-200 text-white p-3 rounded-2xl"
 >
   <div>
     <h1 class="p-3 pb-0">User 1</h1>

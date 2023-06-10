@@ -2,6 +2,7 @@
   import Nav from "../components/Nav.svelte";
   import ProfileCard from "../components/ProfileCard.svelte";
   import SubjectCard from "../components/SubjectCard.svelte";
+
 </script>
 
 <Nav/>
@@ -28,12 +29,12 @@ class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img ove
 <div class=" bg-neutral-300 w-full text-center">
   
   <h2
-    class="text-5xl bg-neutral-200 pt-10 mb-10 pb-10 w-fit rounded-full text-white font-medium mx-auto shadow-lg shadow-neutral-150"
+    class="text-5xl bg-transparent pt-10 mb-10 pb-10 w-fit rounded-full text-white font-medium mx-auto"
   >
     <p class="p-3">Let's start learning...</p>
   </h2>
   <div
-    class="grid grid-cols-3 p-4 gap-4 mb-4 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
+    class="grid grid-cols-3 p-4 gap-4 mb-0 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
   >
     <SubjectCard />
     <SubjectCard />
@@ -50,9 +51,8 @@ class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img ove
 <section
   class="flex items-center justify-center h-screen mx-auto mb-12 bg-fixed bg-center bg-cover custom-img"
 >
-  <div class="p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl">
-    Parralax inline
-  </div>
+<!-- use lottie files for animation -->
+
 </section>
 <div class="max-w-lg m-auto">
   <p class="mb-4">
