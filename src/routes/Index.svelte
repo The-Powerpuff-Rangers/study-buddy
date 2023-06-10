@@ -83,6 +83,7 @@ class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img ove
   </p>
 </div>
 
+
 <style>
   .custom-img {
     background-image: url("../assets/backgroundHome.png");
