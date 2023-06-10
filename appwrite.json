@@ -1,0 +1,34 @@
+{
+    "projectId": "studyhub",
+    "projectName": "Study Hub",
+    "functions": [
+        {
+            "$id": "create-chatroom",
+            "name": "create-chatroom",
+            "runtime": "python-3.9",
+            "path": "functions/create-chatroom",
+            "entrypoint": "src/index.py",
+            "ignore": [
+                "__pypackages__"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        },
+        {
+            "$id": "test",
+            "name": "My Awesome Function",
+            "runtime": "python-3.9",
+            "path": "functions/My Awesome Function",
+            "entrypoint": "src/index.py",
+            "ignore": [
+                "__pypackages__"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
+    ]
+}
