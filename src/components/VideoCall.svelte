@@ -15,7 +15,7 @@
       channel: channelId,
       // Pass your temp token here.
       token:
-        "007eJxTYFg8/2hJxYMr2aFbebO2X3lkpzJr0RIfm+u7S1d1yPS3ZxgrMJilGVhapBpbGhukGJiYpBomWZibmFimGVukJJuaJyenPS+rTWkIZGRwSS1kZWSAQBCfkcGQgQEAUdAe7Q==",
+        "",
       // Set the user ID.
       uid: uid,
     };
