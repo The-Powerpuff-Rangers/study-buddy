@@ -1,5 +1,6 @@
 <script>
   import Beam from "../components/Beam.svelte";
+ 
 </script>
 
 <div>
@@ -21,6 +22,7 @@
     </div>
   </div>
 </div>
+
 
 <style>
 </style>

@@ -1,5 +1,19 @@
 <script lang="ts">
+  import { login, loginWithGoogle } from "../api/authentication/auth";
+
   export const cover: string = "src/assets/books.jpg";
+
+  let email: string = "";
+  let password: string = "";
+
+async  function signIn() {
+  if(email === "" || password === "") {
+    alert("Please fill all the fields")
+    return
+  }
+  const response = await login(email, password);
+  console.log(response);
+  }
 </script>
 
 <!-- Markup Area Begin -->
@@ -30,6 +44,7 @@
               id="email"
               class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
               placeholder=""
+              bind:value={email}
             />
           </div>
           <div>
@@ -41,12 +56,14 @@
               class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
               placeholder=""
               type="password"
+              bind:value={password}
             />
           </div>
 
           <button
             class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-pink-500 hover:bg-pink-500 focus:outline-none focus:shadow-outline-blue bg-pink-600"
-          >
+            on:click={signIn}
+            >
             Log in
           </button>
 
@@ -61,7 +78,8 @@
           <div class="flex items-center justify-center gap-4">
             <button
               class="flex items-center justify-center w-full px-4 py-2 text-sm text-gray-700 border border-gray-300 rounded-lg hover:border-gray-500 focus:border-gray-500"
-            >
+            on:click={loginWithGoogle}
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
