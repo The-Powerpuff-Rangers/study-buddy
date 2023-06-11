@@ -1,6 +1,5 @@
 <script lang="ts">
   import AgoraRTC from "agora-rtc-sdk-ng";
-  // import * as utils from "../utils/TokenGenerator.ts";
 
   export var channelId: string;
   export var uid: string;
@@ -38,7 +37,7 @@
     // Set the channel name.
     channel: channelId,
     // Pass your temp token here.
-    token: generateRtcToken(channelId, uid),
+    token: "generateRtcToken(channelId, uid)",
     // Set the user ID.
     uid: uid,
   };
@@ -164,13 +163,25 @@
   }
 </script>
 
-<div class="row">
-  <div>
-    <button type="button" id="join" class="bg-white rounded-xl p-2">Join</button
+<div class="w-full h-screen bg-neutral-300 flex flex-col justify-between">
+  <div class="m-10 my-16 h-full w-full">
+    <div id="localCamera" class="h-96 w-2/4 bg-white rounded-xl">Video Meet</div>
+  </div>
+  <div class="flex flex-row justify-center space-x-8 p-5">
+    <button id="mic" class="btn btn-primary px-5 py-5 rounded-full bg-white">
+      <img src="/src/assets/mic.svg" alt="mic" />
+    </button>
+    <button id="video" class="btn btn-primary px-5 py-5 rounded-full bg-white">
+      <img src="/src/assets/camera.svg" alt="video" />
+    </button>
+    <button
+      id="leave"
+      class="btn bg-primary-200 px-7 py-5 rounded-lg text-white"
+      >End Meeting</button
     >
-    <button type="button" id="leave" class="bg-primary-300 rounded-xl p-2"
-      >Leave</button
-    >
+    <button id="chat" class="btn btn-primary px-5 py-5 rounded-full bg-white">
+      <img src="/src/assets/message-square-dashed.svg" alt="chat" />
+    </button>
   </div>
 </div>
 
