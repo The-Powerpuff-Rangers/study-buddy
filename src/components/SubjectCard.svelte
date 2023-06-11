@@ -6,7 +6,7 @@
   
   <div class="bg-primary-300 shadow-lg shadow-neutral-200 rounded-lg flex flex-col h-80 w-80 m-2 p-2 text-center hover:bg-primary-100">
     <div class="items-baseline h-full pt-3 bg-transparent">
-    <img src={imagePath} alt="Placeholder Image" class="rounded-full w-1/4 mx-auto mb-3">
+    <img src={imagePath} alt="Placeholder" class="rounded-full w-1/4 mx-auto mb-3">
     <h3 class="text-lg font-semibold mb-2 mx-auto">{subjectName}</h3>
   </div>
   </div>
