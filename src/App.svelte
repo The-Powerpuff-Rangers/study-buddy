@@ -9,6 +9,7 @@
   import Calling from "./routes/Calling.svelte";
   import Friends from "./routes/Friends.svelte";
 
+
 </script>
 <Router>
   <Route path="/" component="{Landing}"/>
