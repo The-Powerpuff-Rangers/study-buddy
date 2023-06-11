@@ -1,8 +1,36 @@
 <script lang="ts">
   import AgoraRTC from "agora-rtc-sdk-ng";
-  // import * as utils from "../utils/TkGenerator.cjs";
-  export let channelId: string;
-  export let uid: string;
+  // import * as utils from "../utils/TokenGenerator.ts";
+
+  export var channelId: string;
+  export var uid: string;
+
+  import { RtcTokenBuilder, RtcRole } from "agora-token";
+
+  function generateRtcToken(channelName: string, uid: string): string {
+    const appId = "6f098e3930d044e1b87449f38dc57ccf";
+    const appCertificate = "e94b5360356f4f89a3a17f2a0e5f0fb9";
+
+    const expirationTimeInSeconds = 3600;
+
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+
+    const privilegeExpiredTs = currentTimestamp + expirationTimeInSeconds;
+
+    // IMPORTANT! Build token with either the uid or with the user account. Comment out the option you do not want to use below.
+    // Build token with uid
+    const tokenA = RtcTokenBuilder.buildTokenWithUid(
+      appId,
+      appCertificate,
+      channelName,
+      parseInt(uid),
+      RtcRole.PUBLISHER,
+      expirationTimeInSeconds,
+      privilegeExpiredTs
+    );
+    console.log("Token With Integer Number Uid: " + tokenA);
+    return tokenA;
+  }
 
   let options = {
     // Pass your App ID here.
@@ -10,8 +38,7 @@
     // Set the channel name.
     channel: channelId,
     // Pass your temp token here.
-    token:
-      "007eJxTYFh01+3epks7XnRtuGWW8zZop8YCnddrzq/+ccppVUHGg2W5CgxmaQaWFqnGlsYGKQYmJqmGSRbmJiaWacYWKcmm5snJaYvOtKQsilyTUn5mOQMjELIAMQgwgUlmMMkCJhkZDBkYAOONI2Y=",
+    token: generateRtcToken(channelId, uid),
     // Set the user ID.
     uid: uid,
   };
@@ -146,3 +173,6 @@
     >
   </div>
 </div>
+
+<style>
+</style>
