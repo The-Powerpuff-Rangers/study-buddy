@@ -8,6 +8,7 @@
   import Register from "./routes/Register.svelte";
   import Calling from "./routes/Calling.svelte";
   import Friends from "./routes/Friends.svelte";
+  import Details from "./routes/Details.svelte";
 
 
 </script>
@@ -19,6 +20,7 @@
   <Route path="/login" component="{Login}" />
   <Route path="/register" component="{Register}" />
   <Route path="/friends" component="{Friends}" />
+  <Route path="/details" component="{Details}" />
   <Route path="/calling/:channel/:uid" let:params>
     <Calling channelId={params.channel} uid={params.uid}/>
   </Route>
