@@ -1,7 +1,11 @@
 <script lang="ts">
-    import Nav from "../components/Nav.svelte";
+  import Footer from "../components/Footer.svelte";
+  import Nav from "../components/Nav.svelte";
 </script>
 
-<div class="w-full h-screen bg-neutral-300">
-  <Nav />
-</div>
+<Nav />
+<section class="h-screen w-full bg-neutral-300">
+  
+</section>
+
+<Footer />

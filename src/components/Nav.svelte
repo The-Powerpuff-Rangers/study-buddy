@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let logo: string = "src/assets/logo-pink.png";
+  export let logo: string = "src/assets/logos/logo-pink.png";
   export let logout: () => void;
 
   let active: string = "hidden";
