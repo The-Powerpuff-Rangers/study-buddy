@@ -30,7 +30,7 @@
         <div class="w-full">
           <div class="flex justify-center">
             <img
-              src="src/assets/logo-pink.png"
+              src="src/assets/logos/logo-pink.png"
               alt="logo"
               class=" h-12 float-right"
             />

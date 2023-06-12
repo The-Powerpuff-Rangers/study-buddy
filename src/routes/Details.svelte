@@ -26,7 +26,7 @@
     <div class="w-full p-5">
       <div class="flex justify-center">
         <img
-          src="src/assets/svelte.svg"
+          src="src/assets/icons/svelte.svg"
           alt="logo"
           class=" h-full float-right"
         />

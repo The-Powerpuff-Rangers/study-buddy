@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let logo:string = "src/assets/logo-white.png";
+    export let logo:string = "src/assets/logos/logos/logos/logo-white.png";
 </script>
 
 <footer class="bg-neutral-300 py-10">
