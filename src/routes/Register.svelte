@@ -1,7 +1,7 @@
 <script lang="ts">
   import { loginWithGoogle, signUp } from "../api/authentication/auth";
 
-  export const cover: string = "src/assets/cover-signup.jpg";
+  export const cover: string = "src/assets/covers/cover-signup.jpg";
 
   import universities from "../assets/json/university_list.json";
   let unis: string[] = universities.Universities;

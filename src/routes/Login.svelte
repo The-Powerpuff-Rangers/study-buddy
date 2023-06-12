@@ -1,7 +1,7 @@
 <script lang="ts">
   import { login, loginWithGoogle } from "../api/authentication/auth";
 
-  export const cover: string = "src/assets/books.jpg";
+  export const cover: string = "src/assets/covers/books.jpg";
 
   let email: string = "";
   let password: string = "";
