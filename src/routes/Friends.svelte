@@ -3,13 +3,13 @@
   import UserInvite from "../components/UserInvite.svelte";
 </script>
 
-<div class="bg-neutral-300 h-screen w-full">
+<div class="custom-img h-screen w-full">
   <Nav />
-  <div class="mb-3 w-2/3 p-5 mx-28 pt-32">
+  <div class="mb-3 w-5/6 p-5 mx-auto max-w-2xl pt-40">
     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
       <input
         type="search"
-        class="relative bg-white m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+        class="relative bg-neutral-50 m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
         placeholder="Search"
         aria-label="Search"
         aria-describedby="button-addon2"
@@ -38,21 +38,31 @@
 
   <!-- User Invite Cards -->
   <!-- Friends -->
-  <label class="text-xl font-bold text-white ml-24" for="friends">
+  <div class = "flex flex-col max-w-4xl mx-auto">
+  <h1 class="text-xl pb-4 font-bold text-white max-md:mx-auto ml-48">
     Friends
-  </label>
+  </h1>
   <div id="friends">
     <UserInvite isFriends={true} />
     <UserInvite isFriends={true} />
   </div>
   <!-- Unknown Users -->
-  <label class="text-xl font-bold text-white ml-24" for="friends">
+  <h1 class="text-xl py-4 pt-8 font-bold text-white max-md:mx-auto ml-48">
     Invites
-  </label>
+  </h1>
   <div id="friends">
     <UserInvite isFriends={false} />
     <UserInvite isFriends={false} />
   </div>
+  </div>
 </div>
-
-
+<style>
+  .custom-img {
+    background-image: url("../assets/backgroundHome.png");
+  }
+  @media (max-height: 700px) {
+    .heading {
+      margin-top: 0rem;
+    }
+  }
+</style>
