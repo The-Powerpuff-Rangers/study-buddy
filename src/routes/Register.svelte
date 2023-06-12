@@ -1,8 +1,22 @@
 <script lang="ts">
+  import { loginWithGoogle, signUp } from "../api/authentication/auth";
+
   export const cover: string = "src/assets/cover-signup.jpg";
 
   import universities from "../assets/json/university_list.json";
   let unis: string[] = universities.Universities;
+  let email: string = "";
+  let password: string = "";
+ async function register() {
+  if(email.length < 1 || password.length < 8) {
+    alert("Please enter a valid email and password")
+    return;
+  }
+  if(email != null || email != undefined || email != "" || password != null || password != undefined || password != "") {
+    const response =  await signUp(email,password)
+    console.log(response)
+  }
+}
 </script>
 
 <!-- Markup Area Begin -->
@@ -33,6 +47,7 @@
               id="email"
               class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
               placeholder=""
+              bind:value={email}
             />
           </div>
           <div>
@@ -44,6 +59,7 @@
               class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
               placeholder=""
               type="password"
+              bind:value={password}
             />
           </div>
           <div>
@@ -76,7 +92,7 @@
           </div> -->
           <!-- END -->
 
-          <button class="block w-full px-4 py-2 mt-10 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-pink-500 hover:bg-pink-500 focus:outline-none focus:shadow-outline-blue bg-pink-600">
+          <button class="block w-full px-4 py-2 mt-10 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-pink-500 hover:bg-pink-500 focus:outline-none focus:shadow-outline-blue bg-pink-600" on:click={register}>
             Sign Up
           </button>
           <p class=" text-sm mt-4 text-gray-900 ">
@@ -91,6 +107,7 @@
           <div class="flex items-center justify-center gap-4">
             <button
               class="flex items-center justify-center w-full px-4 py-2 text-sm text-gray-700 border border-gray-300 rounded-lg hover:border-gray-500 focus:border-gray-500"
+              on:click={loginWithGoogle}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

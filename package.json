@@ -24,9 +24,13 @@
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "agora-rtc-sdk-ng": "^4.17.2",
+    "agora-token": "^2.0.3",
+    "appwrite": "^10.2.0",
     "dotenv": "^16.1.4",
     "install": "^0.13.0",
     "npm": "^9.6.7",
-    "three": "^0.152.2"
+    "openai": "^3.2.1",
+    "three": "^0.152.2",
+    "tom-select": "^2.2.2"
   }
 }

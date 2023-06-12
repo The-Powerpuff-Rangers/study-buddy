@@ -1,1 +1,23 @@
-<h1>Calling</h1>
+<script lang="ts">
+    export let channelId: string;
+    export let uid: string;
+    import VideoCall from "../components/VideoCall.svelte";
+    import ChatBox from "../components/ChatBox.svelte";
+    import {Message} from "../models/Message.ts";
+
+    let messages: Message[] = [
+  new Message(1, new Date(), "Alice", "Hi there, I'm writing a chat message!"),
+  new Message(2, new Date(), "Bob", "Hi Alice, what's the weather over there? ☁️"),
+  new Message(4, new Date(), "Alice", "It's really sunny over here 🌞😎"),
+  new Message(3, new Date(), "Carol", "Hi guys 👋")
+];
+</script>
+
+<div class="flex flex-row h-screen bg-neutral-300 w-full">
+<div class = "w-8/12">
+<VideoCall channelId={channelId} uid={uid}/>
+</div>
+<div class = "w-4/12">
+<ChatBox {messages}/>
+</div>
+</div>
