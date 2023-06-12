@@ -171,16 +171,13 @@
     <button id="mic" class="btn btn-primary px-5 py-5 rounded-full bg-white">
       <img src="/src/assets/mic.svg" alt="mic" />
     </button>
-    <button id="video" class="btn btn-primary px-5 py-5 rounded-full bg-white">
-      <img src="/src/assets/camera.svg" alt="video" />
-    </button>
     <button
       id="leave"
       class="btn bg-primary-200 px-7 py-5 rounded-lg text-white"
       >End Meeting</button
     >
-    <button id="chat" class="btn btn-primary px-5 py-5 rounded-full bg-white">
-      <img src="/src/assets/message-square-dashed.svg" alt="chat" />
+    <button id="video" class="btn btn-primary px-5 py-5 rounded-full bg-white">
+      <img src="/src/assets/camera.svg" alt="video" />
     </button>
   </div>
 </div>
