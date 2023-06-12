@@ -1,5 +1,4 @@
 <script lang="ts">
-  export const cover: string = "src/assets/cover-signup.jpg";
 
   import universities from "../assets/json/university_list.json";
   import subjects from "../assets/json/subjects_list.json";
