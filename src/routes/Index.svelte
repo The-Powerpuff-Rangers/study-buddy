@@ -1,13 +1,13 @@
 <script lang="ts">
+  import Footer from "../components/Footer.svelte";
   import Nav from "../components/Nav.svelte";
   import ProfileCard from "../components/ProfileCard.svelte";
   import SubjectCard from "../components/SubjectCard.svelte";
-
 </script>
 
-<Nav/>
+<Nav />
 <header
-class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img overflow-hidden"
+  class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img overflow-hidden"
 >
   <div class="p-5 mx-auto mt-36 heading">
     <div
@@ -26,15 +26,21 @@ class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img ove
     </div>
   </div>
 </header>
-<div class=" bg-neutral-300 w-full text-center">
-  
-  <h2
-    class="text-5xl bg-transparent pt-10 mb-10 pb-10 w-fit rounded-full text-white font-medium mx-auto"
-  >
-    <p class="p-3">Let's start learning...</p>
-  </h2>
+<div class="bg-neutral-300">
+  <div class="flex justify-center items-center">
+    <h1 class="text-8xl text-left text-white opacity-10 absolute">
+      Let's Learn
+    </h1>
+    <h2
+      class="text-primary-100 font-extrabold text-6xl p-6 drop-shadow-[0_0px_15px_rgba(240,44,50,0.7)]"
+    >
+      Let's Learn
+    </h2>
+  </div>
+  <!-- <div class=" bg-neutral-300 w-full text-center"> -->
+
   <div
-    class="grid grid-cols-3 p-4 gap-4 mb-0 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
+    class="grid grid-cols-3 p-4 pt-10 gap-8 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
   >
     <SubjectCard />
     <SubjectCard />
@@ -49,15 +55,14 @@ class="flex-col items-center h-screen bg-fixed bg-center bg-cover custom-img ove
   </div>
 </div>
 <section
-  class="flex items-center justify-center h-screen mx-auto mb-12 bg-fixed bg-center bg-cover custom-img"
+  class="flex items-center justify-center h-screen mx-auto bg-fixed bg-center bg-cover custom-img"
 >
-<!-- use lottie files for animation -->
-
+  <div class="text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl" />
 </section>
-<div class="max-w-lg m-auto">
 
-</div>
+<Footer />
 
+<!-- <div class="max-w-lg m-auto" /> -->
 
 <style>
   .custom-img {
