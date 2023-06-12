@@ -1,7 +1,7 @@
 <script lang="ts">
   import { loginWithGoogle, signUp } from "../api/authentication/auth";
 
-  export const cover: string = "src/assets/cover-signup.jpg";
+  export const cover: string = "src/assets/covers/cover-signup.jpg";
 
   import universities from "../assets/json/university_list.json";
   let unis: string[] = universities.Universities;
@@ -30,7 +30,7 @@
         <div class="w-full">
           <div class="flex justify-center">
             <img
-              src="src/assets/logo-pink.png"
+              src="src/assets/logos/logo-pink.png"
               alt="logo"
               class=" h-12 float-right"
             />

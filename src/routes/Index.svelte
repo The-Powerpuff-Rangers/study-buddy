@@ -66,7 +66,7 @@
 
 <style>
   .custom-img {
-    background-image: url("../assets/backgroundHome.png");
+    background-image: url("../assets/covers/backgroundHome.png");
   }
   @media (max-height: 700px) {
     .heading {

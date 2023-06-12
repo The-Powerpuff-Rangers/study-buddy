@@ -1,5 +1,4 @@
 <script lang="ts">
-  export const cover: string = "src/assets/cover-signup.jpg";
 
   import universities from "../assets/json/university_list.json";
   import subjects from "../assets/json/subjects_list.json";
@@ -26,7 +25,7 @@
     <div class="w-full p-5">
       <div class="flex justify-center">
         <img
-          src="src/assets/svelte.svg"
+          src="src/assets/icons/svelte.svg"
           alt="logo"
           class=" h-full float-right"
         />

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { login, loginWithGoogle } from "../api/authentication/auth";
 
-  export const cover: string = "src/assets/books.jpg";
+  export const cover: string = "src/assets/covers/books.jpg";
 
   let email: string = "";
   let password: string = "";
@@ -27,7 +27,7 @@ async  function signIn() {
         <div class="w-full">
           <div class="flex justify-center">
             <img
-              src="src/assets/logo-pink.png"
+              src="src/assets/logos/logo-pink.png"
               alt="logo"
               class=" h-12 float-right"
             />
