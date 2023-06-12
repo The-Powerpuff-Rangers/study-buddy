@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Footer from "../components/Footer.svelte";
   import Nav from "../components/Nav.svelte";
   import ProfileCard from "../components/ProfileCard.svelte";
   import SubjectCard from "../components/SubjectCard.svelte";
@@ -39,7 +40,7 @@
   <!-- <div class=" bg-neutral-300 w-full text-center"> -->
 
   <div
-    class="grid grid-cols-3 p-4 pt-10 gap-8 mb-4 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
+    class="grid grid-cols-3 p-4 pt-10 gap-8 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
   >
     <SubjectCard />
     <SubjectCard />
@@ -54,13 +55,14 @@
   </div>
 </div>
 <section
-  class="flex items-center justify-center h-screen mx-auto mb-12 bg-fixed bg-center bg-cover custom-img"
+  class="flex items-center justify-center h-screen mx-auto bg-fixed bg-center bg-cover custom-img"
 >
-  <div class="p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl">
-    Parralax inline
-  </div>
+  <div class="text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl" />
 </section>
-<div class="max-w-lg m-auto" />
+
+<Footer />
+
+<!-- <div class="max-w-lg m-auto" /> -->
 
 <style>
   .custom-img {

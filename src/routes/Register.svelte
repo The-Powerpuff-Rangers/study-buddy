@@ -30,9 +30,9 @@
         <div class="w-full">
           <div class="flex justify-center">
             <img
-              src="src/assets/svelte.svg"
+              src="src/assets/logo-pink.png"
               alt="logo"
-              class=" h-full float-right"
+              class=" h-12 float-right"
             />
           </div>
           <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">
