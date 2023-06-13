@@ -1,43 +1,18 @@
 <script lang="ts">
   import AgoraRTC from "agora-rtc-sdk-ng";
+  // import { generateRtcToken } from "../utils/TokenGenerator.ts";
 
   export var channelId: string;
   export var uid: string;
 
-  import { RtcTokenBuilder, RtcRole } from "agora-token";
-
-  function generateRtcToken(channelName: string, uid: string): string {
-    const appId = "6f098e3930d044e1b87449f38dc57ccf";
-    const appCertificate = "e94b5360356f4f89a3a17f2a0e5f0fb9";
-
-    const expirationTimeInSeconds = 3600;
-
-    const currentTimestamp = Math.floor(Date.now() / 1000);
-
-    const privilegeExpiredTs = currentTimestamp + expirationTimeInSeconds;
-
-    // IMPORTANT! Build token with either the uid or with the user account. Comment out the option you do not want to use below.
-    // Build token with uid
-    const tokenA = RtcTokenBuilder.buildTokenWithUid(
-      appId,
-      appCertificate,
-      channelName,
-      parseInt(uid),
-      RtcRole.PUBLISHER,
-      expirationTimeInSeconds,
-      privilegeExpiredTs
-    );
-    console.log("Token With Integer Number Uid: " + tokenA);
-    return tokenA;
-  }
-
+  
   let options = {
     // Pass your App ID here.
     appId: "6f098e3930d044e1b87449f38dc57ccf",
     // Set the channel name.
     channel: channelId,
     // Pass your temp token here.
-    token: "generateRtcToken(channelId, uid)",
+    token: "007eJxTYDitG1z+ewm3rYlZxYQWCbdV6x+xvrP6KTpxxo2s7B8PovMUGMzSDCwtUo0tjQ1SDExMUg2TLMxNTCzTjC1Skk3Nk5PTrAvbUxqsOBnSLUsZGRkYGViAePfqCSlMYJIZTLKASS6G4pLSlMqk0pSUSgYGANouKhM=",
     // Set the user ID.
     uid: uid,
   };
@@ -63,7 +38,7 @@
     // Dynamically create a container in the form of a DIV element to play the local video track.
     const localPlayerContainer = document.createElement("div");
     // Specify the ID of the DIV container. You can use the uid of the local user.
-    localPlayerContainer.id = String(options.uid);
+    localPlayerContainer.id = "localUser";
     // Set the textContent property of the local video container to the local user id.
     localPlayerContainer.textContent = "Local user " + options.uid;
     // Set the local video container size.
@@ -142,8 +117,8 @@
         channelParameters.localAudioTrack.close();
         channelParameters.localVideoTrack.close();
         // Remove the containers you created for the local video and remote video.
-        removeVideoDiv(remotePlayerContainer.id);
-        removeVideoDiv(localPlayerContainer.id);
+        // removeVideoDiv(remotePlayerContainer.id);
+        // removeVideoDiv(localPlayerContainer.id);
         // Leave the channel
         await agoraEngine.leave();
         console.log("You left the channel");
@@ -164,8 +139,11 @@
 </script>
 
 <div class="m-10 my-16 w-full">
-  <div id="localCamera" class="h-96 w-2/4 bg-white rounded-xl">Video Meet</div>
+  <div id="localUser" class="h-96 w-2/4 bg-white rounded-xl">
+Video Meet
+  
 </div>
-
+</div>
+<button id="join">Video Meet</button>
 <style>
 </style>
