@@ -31,20 +31,6 @@
             "timeout": 15
         },
         {
-            "$id": "rtg",
-            "name": "rtc-token-generate",
-            "runtime": "python-3.9",
-            "path": "functions/rtc-token-generate",
-            "entrypoint": "src/index.py",
-            "ignore": [
-                "__pypackages__"
-            ],
-            "execute": [],
-            "events": [],
-            "schedule": "",
-            "timeout": 15
-        },
-        {
             "$id": "openai-bot",
             "name": "chat-bot",
             "runtime": "python-3.9",
