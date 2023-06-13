@@ -14,10 +14,10 @@
 </script>
 
 <div class="flex flex-row h-screen bg-neutral-300 w-full">
-<div class = "w-8/12">
+<div class = "w-8/12"> 
 <VideoCall channelId={channelId} uid={uid}/>
 </div>
-<div class = "w-4/12">
+<div class = "w-4/12 p-10 h-full flex justify-end">
 <ChatBox {messages}/>
 </div>
 </div>

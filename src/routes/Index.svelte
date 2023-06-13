@@ -28,11 +28,11 @@
 </header>
 <div class="bg-neutral-300">
   <div class="flex justify-center items-center">
-    <h1 class="text-8xl text-left text-white opacity-10 absolute">
+    <h1 class=" text-8xl text-left text-white opacity-10 absolute">
       Let's Learn
     </h1>
     <h2
-      class="text-primary-100 font-extrabold text-6xl p-6 drop-shadow-[0_0px_15px_rgba(240,44,50,0.7)]"
+      class=" text-primary-100 font-extrabold text-6xl p-6 drop-shadow-[0_0px_15px_rgba(240,44,50,0.7)]"
     >
       Let's Learn
     </h2>
@@ -40,7 +40,7 @@
   <!-- <div class=" bg-neutral-300 w-full text-center"> -->
 
   <div
-    class="grid grid-cols-3 p-4 pt-10 gap-8 w-fit mx-auto items-centerd justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
+    class="grid grid-cols-3 p-4 pt-10 gap-8 w-fit mx-auto justify-center max-lg:grid-cols-2 max-md:grid-cols-1"
   >
     <SubjectCard />
     <SubjectCard />
@@ -57,7 +57,12 @@
 <section
   class="flex items-center justify-center h-screen mx-auto bg-fixed bg-center bg-cover custom-img"
 >
-  <div class="text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl" />
+  <div class="text-2xl text-white flex flex-col bg-opacity-50 rounded-xl">
+    <h1 class=" text-8xl text-center text-white opacity-100">
+      How it works?
+    </h1>
+      <iframe width="190rem" height="160rem" class="mt-10 rounded-xl" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 </section>
 
 <Footer />
