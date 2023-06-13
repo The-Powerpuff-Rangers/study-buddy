@@ -19,10 +19,23 @@
   
     async function send() {
       if (!message || message == undefined || message == "" || !user || user == undefined || user == "") return;
-  
+
+      if (message.startsWith("/openai")) {
+      
+      message = message.slice(8);
+      messages.push({ timestamp: new Date(), user: "Alex", message: message, id: messages.length + 1 });
+      message = "";
+      messages = messages;
+      }      
+      else{
+    
       messages.push({ timestamp: new Date(), user: user, message: message, id: messages.length + 1 });
       message = "";
       messages = messages;
+      
+    }
+
+      
     }
   
     const scrollToBottom = async (node: any) => {

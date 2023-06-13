@@ -1,9 +1,8 @@
-import os
 import openai
 
 
 class ChatBot:
-    def __init__(self, model, api_key, max_tokens=50, temperature=0.9):
+    def __init__(self, model, api_key, max_tokens=200, temperature=0.9):
         self.model = model
         self.max_tokens = max_tokens
         self.temperature = temperature

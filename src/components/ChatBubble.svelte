@@ -9,8 +9,8 @@
   
   <div class="{message.user == user ? 'flex justify-end' : 'flex justify-start'} items-center mt-2">
     <div
-      class="w-40 py-2 mx-3 px-2 rounded-lg {message.user == user ? 'bg-primary-100' : 'bg-neutral-30'}">
-      <p class="text-xs">{message.message}</p>
+      class="w-40 py-2 mx-3 px-2 rounded-lg {message.user == user ? 'bg-primary-100 text-white' : 'bg-neutral-30'}">
+      <p class="text-s">{message.message}</p>
     </div>
   </div>
   

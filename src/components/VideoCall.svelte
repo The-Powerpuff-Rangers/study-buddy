@@ -30,26 +30,11 @@
     remoteUid: null,
   };
   async function startBasicCall() {
-    // Create an instance of the Agora Engine
 
     const agoraEngine = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
-    // Dynamically create a container in the form of a DIV element to play the remote video track.
-    const remotePlayerContainer = document.createElement("div");
-    // Dynamically create a container in the form of a DIV element to play the local video track.
-    const localPlayerContainer = document.createElement("div");
-    // Specify the ID of the DIV container. You can use the uid of the local user.
-    localPlayerContainer.id = "localUser";
-    // Set the textContent property of the local video container to the local user id.
-    localPlayerContainer.textContent = "Local user " + options.uid;
-    // Set the local video container size.
-    localPlayerContainer.style.width = "640px";
-    localPlayerContainer.style.height = "480px";
-    localPlayerContainer.style.padding = "15px 5px 5px 5px";
-    // Set the remote video container size.
-    remotePlayerContainer.style.width = "640px";
-    remotePlayerContainer.style.height = "480px";
-    remotePlayerContainer.style.padding = "15px 5px 5px 5px";
-    // Listen for the "user-published" event to retrieve a AgoraRTCRemoteUser object.
+    const remotePlayerContainer = document.getElementById("remoteUser");
+    const localPlayerContainer = document.getElementById("localUser");
+
     agoraEngine.on("user-published", async (user, mediaType) => {
       // Subscribe to the remote user when the SDK triggers the "user-published" event.
       await agoraEngine.subscribe(user, mediaType);
@@ -63,12 +48,12 @@
         // Save the remote user id for reuse.
         channelParameters.remoteUid = user.uid.toString();
         // Specify the ID of the DIV container. You can use the uid of the remote user.
-        remotePlayerContainer.id = user.uid.toString();
+        // remotePlayerContainer.id = user.uid.toString();
         channelParameters.remoteUid = user.uid.toString();
         remotePlayerContainer.textContent =
           "Remote user " + user.uid.toString();
         // Append the remote container to the page body.
-        document.body.append(remotePlayerContainer);
+        // document.body.append(remotePlayerContainer);
         // Play the remote video track.
         channelParameters.remoteVideoTrack.play(remotePlayerContainer);
       }
@@ -84,9 +69,9 @@
         console.log(user.uid + "has left the channel");
       });
     });
-    window.onload = function () {
+    window.onload = async function () {
       // Listen to the Join button click event.
-      document.getElementById("join").onclick = async function () {
+      // document. = async function () {
         // Join a channel.
         await agoraEngine.join(
           options.appId,
@@ -101,7 +86,7 @@
         channelParameters.localVideoTrack =
           await AgoraRTC.createCameraVideoTrack();
         // Append the local video container to the page body.
-        document.body.append(localPlayerContainer);
+        // document.body.append(localPlayerContainer);
         // Publish the local audio and video tracks in the channel.
         await agoraEngine.publish([
           channelParameters.localAudioTrack,
@@ -110,7 +95,7 @@
         // Play the local video track.
         channelParameters.localVideoTrack.play(localPlayerContainer);
         console.log("publish success!");
-      };
+      // };
       // Listen to the Leave button click event.
       document.getElementById("leave").onclick = async function () {
         // Destroy the local audio and video tracks.
@@ -128,21 +113,17 @@
     };
   }
   startBasicCall();
-  // Remove the video stream from the container.
-  function removeVideoDiv(elementId) {
-    console.log("Removing " + elementId + "Div");
-    let Div = document.getElementById(elementId);
-    if (Div) {
-      Div.remove();
-    }
-  }
+
 </script>
 
-<div class="m-10 my-16 w-full">
-  <div id="localUser" class="h-96 w-2/4 bg-white rounded-xl">
-Video Meet
-  
-</div>
+<div class="grid grid-cols-2 p-4 pt-10 gap-8 w-full mx-auto items-centerd justify-center ">
+  <div id="localUser" class="h-96 bg-white rounded-xl">
+    Video Meet
+    
+  </div>
+  <div id="remoteUser" class="h-96  bg-white rounded-xl">
+  Remote
+  </div>
 </div>
 <button id="join">Video Meet</button>
 <style>
