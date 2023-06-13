@@ -7,9 +7,9 @@
     active = active === "hidden" ? "block" : "hidden";
   }
 </script>
-<div class="flex flex-col w-screen items-center ">
+<div class="flex flex-col w-screen items-center">
  <nav
-    class="w-5/6 max-md:w-3/4 fixed mt-4 text-primary-100 p-3 py-5 px-15 flex md:flex-row items-center justify-between rounded-xl bg-neutral-150 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg"
+    class="w-5/6 max-md:w-3/4 fixed mt-4 z-10 text-primary-100 p-3 py-5 px-15 flex md:flex-row items-center justify-between rounded-xl bg-neutral-150 backdrop-filter bg-opacity-30 border-gray-600 backdrop-blur-lg"
   >
     <div class="text-xl px-6 font-bold">
       <img class="h-12" src={logo} alt="logo" />

@@ -23,15 +23,16 @@
     new Message(3, new Date(), "Carol", "Hi guys 👋"),
   ];
 </script>
-<div class="h-full bg-neutral-300 w-full">
+<div class="h-screen bg-neutral-300 w-full">
   <div class="flex flex-row">
     <div class="w-8/12">
       <VideoCall {channelId} {uid} />
     </div>
-    <div class="w-4/12">
+    <div class="w-4/12 p-10 h-full flex justify-end">
       <ChatBox {messages} />
     </div>
   </div>
   <MeetTool />
 </div>
+
 

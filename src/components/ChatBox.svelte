@@ -30,10 +30,10 @@
     };
   </script>
   
-  <div class="h-screen overflow-auto mx-auto">
-    <div class="h-80% bg-white w-80 rounded-2xl shadow-md">
+  <div class="mx-auto w-full h-full">
+    <div class=" bg-white rounded-2xl shadow-md w-full h-fit">
       <h1 class=" rounded-2xl text-lg p-3">In-call Messages</h1>
-      <div bind:this={messageContainer} class=" p-2 overflow-y-auto h-80">
+      <div bind:this={messageContainer} class=" p-2 overflow-y-auto h-96">
         {#each messages as message}
         <Bubble {message} {user}></Bubble>
         {/each}
