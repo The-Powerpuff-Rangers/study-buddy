@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css && vite --port 2343",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css && vite build",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./css/output.css && vite --port 2343",
+    "build": "npx tailwindcss -i ./src/input.css -o ./css/output.css && vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "tailwind:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
