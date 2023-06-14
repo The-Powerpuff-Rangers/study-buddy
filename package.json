@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css && vite --port 2343",
-    "build": "vite build",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css && vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "tailwind:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
