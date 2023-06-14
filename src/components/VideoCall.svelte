@@ -1,13 +1,13 @@
 <script lang="ts">
   import AgoraRTC from "agora-rtc-sdk-ng";
-  import fetch from "node-fetch";
-  // import { generateRtcToken } from "../utils/TokenGenerator.ts";
+  import { generateRtcToken } from "../utils/TokenGenerator.ts";
 
   export var channelId: string;
   export var uid: string;
 
   import { Functions } from "appwrite";
   import client from "../client";
+  import { onMount } from "svelte";
 
   const functions = new Functions(client);
 
@@ -18,7 +18,7 @@
     uid: uid,
   };
 
-  // const promise = functions.createExecution("rtcg", String(data));
+  const promise = functions.createExecution("rtcg", String(data));
 
   // promise.then(
   //   function (response) {
@@ -30,14 +30,13 @@
   //   }
   // );
 
-
   let options = {
     // Pass your App ID here.
     appId: "6f098e3930d044e1b87449f38dc57ccf",
     // Set the channel name.
     channel: channelId,
     // Pass your temp token here.
-    token: "token",
+    token: "007eJxTYBD48+ZrWVTnvVlfNdT3LivjnZdYs2qxqrafiNOM6etVf3EqMJilGVhapBpbGhukGJiYpBomWZibmFimGVukJJuaJyen1f3tTGkIZGR4+1aFmZEBAkF8RgZDBgYAFRge0w==",
     // Set the user ID.
     uid: uid,
   };
@@ -64,7 +63,7 @@
       await agoraEngine.subscribe(user, mediaType);
       console.log("subscribe success");
       // Subscribe and play the remote video in the container If the remote user publishes a video track.
-      if (mediaType == "video") {
+      if (mediaType === "video") {
         // Retrieve the remote video track.
         channelParameters.remoteVideoTrack = user.videoTrack;
         // Retrieve the remote audio track.
@@ -82,7 +81,7 @@
         channelParameters.remoteVideoTrack.play(remotePlayerContainer);
       }
       // Subscribe and play the remote audio track If the remote user publishes the audio track only.
-      if (mediaType == "audio") {
+      if (mediaType === "audio") {
         // Get the RemoteAudioTrack object in the AgoraRTCRemoteUser object.
         channelParameters.remoteAudioTrack = user.audioTrack;
         // Play the remote audio track. No need to pass any DOM element.
@@ -93,7 +92,7 @@
         console.log(user.uid + "has left the channel");
       });
     });
-    window.onload = async function () {
+    // window.onload = async function () {
       // Listen to the Join button click event.
       // document. = async function () {
       // Join a channel.
@@ -135,8 +134,10 @@
         window.location.reload();
       };
     };
-  }
-  startBasicCall();
+  
+  onMount(async () => {
+    await startBasicCall();
+  });
 </script>
 
 <div

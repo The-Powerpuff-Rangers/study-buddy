@@ -58,6 +58,20 @@
             "events": [],
             "schedule": "",
             "timeout": 15
+        },
+        {
+            "$id": "dec",
+            "name": "delete-chatroom",
+            "runtime": "python-3.9",
+            "path": "functions/delete-chatroom",
+            "entrypoint": "src/index.py",
+            "ignore": [
+                "__pypackages__"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
         }
     ]
 }
