@@ -1,18 +1,43 @@
 <script lang="ts">
   import AgoraRTC from "agora-rtc-sdk-ng";
+  import fetch from "node-fetch";
   // import { generateRtcToken } from "../utils/TokenGenerator.ts";
 
   export var channelId: string;
   export var uid: string;
 
-  
+  import { Functions } from "appwrite";
+  import client from "../client";
+
+  const functions = new Functions(client);
+
+  let token: string;
+
+  let data = {
+    channelId: channelId,
+    uid: uid,
+  };
+
+  // const promise = functions.createExecution("rtcg", String(data));
+
+  // promise.then(
+  //   function (response) {
+  //     console.log(response); // Success
+  //     token = response['token']
+  //   },
+  //   function (error) {
+  //     console.log(error); // Failure
+  //   }
+  // );
+
+
   let options = {
     // Pass your App ID here.
     appId: "6f098e3930d044e1b87449f38dc57ccf",
     // Set the channel name.
     channel: channelId,
     // Pass your temp token here.
-    token: "007eJxTYDitG1z+ewm3rYlZxYQWCbdV6x+xvrP6KTpxxo2s7B8PovMUGMzSDCwtUo0tjQ1SDExMUg2TLMxNTCzTjC1Skk3Nk5PTrAvbUxqsOBnSLUsZGRkYGViAePfqCSlMYJIZTLKASS6G4pLSlMqk0pSUSgYGANouKhM=",
+    token: "token",
     // Set the user ID.
     uid: uid,
   };
@@ -30,7 +55,6 @@
     remoteUid: null,
   };
   async function startBasicCall() {
-
     const agoraEngine = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
     const remotePlayerContainer = document.getElementById("remoteUser");
     const localPlayerContainer = document.getElementById("localUser");
@@ -72,29 +96,29 @@
     window.onload = async function () {
       // Listen to the Join button click event.
       // document. = async function () {
-        // Join a channel.
-        await agoraEngine.join(
-          options.appId,
-          options.channel,
-          options.token,
-          options.uid
-        );
-        // Create a local audio track from the audio sampled by a microphone.
-        channelParameters.localAudioTrack =
-          await AgoraRTC.createMicrophoneAudioTrack();
-        // Create a local video track from the video captured by a camera.
-        channelParameters.localVideoTrack =
-          await AgoraRTC.createCameraVideoTrack();
-        // Append the local video container to the page body.
-        // document.body.append(localPlayerContainer);
-        // Publish the local audio and video tracks in the channel.
-        await agoraEngine.publish([
-          channelParameters.localAudioTrack,
-          channelParameters.localVideoTrack,
-        ]);
-        // Play the local video track.
-        channelParameters.localVideoTrack.play(localPlayerContainer);
-        console.log("publish success!");
+      // Join a channel.
+      await agoraEngine.join(
+        options.appId,
+        options.channel,
+        options.token,
+        options.uid
+      );
+      // Create a local audio track from the audio sampled by a microphone.
+      channelParameters.localAudioTrack =
+        await AgoraRTC.createMicrophoneAudioTrack();
+      // Create a local video track from the video captured by a camera.
+      channelParameters.localVideoTrack =
+        await AgoraRTC.createCameraVideoTrack();
+      // Append the local video container to the page body.
+      // document.body.append(localPlayerContainer);
+      // Publish the local audio and video tracks in the channel.
+      await agoraEngine.publish([
+        channelParameters.localAudioTrack,
+        channelParameters.localVideoTrack,
+      ]);
+      // Play the local video track.
+      channelParameters.localVideoTrack.play(localPlayerContainer);
+      console.log("publish success!");
       // };
       // Listen to the Leave button click event.
       document.getElementById("leave").onclick = async function () {
@@ -113,18 +137,15 @@
     };
   }
   startBasicCall();
-
 </script>
 
-<div class="grid grid-cols-2 p-4 pt-10 gap-8 w-full mx-auto items-centerd justify-center ">
-  <div id="localUser" class="h-96 bg-white rounded-xl">
-    Video Meet
-    
-  </div>
-  <div id="remoteUser" class="h-96  bg-white rounded-xl">
-  Remote
-  </div>
+<div
+  class="grid grid-cols-2 p-4 pt-10 gap-8 w-full mx-auto items-centerd justify-center"
+>
+  <div id="localUser" class="h-96 bg-white rounded-xl">Video Meet</div>
+  <div id="remoteUser" class="h-96 bg-white rounded-xl">Remote</div>
 </div>
 <button id="join">Video Meet</button>
+
 <style>
 </style>
